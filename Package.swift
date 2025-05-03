@@ -3,25 +3,24 @@
 
 import PackageDescription
 
+// Package.swift (local package)
 let package = Package(
     name: "IRDashboard",
-    defaultLocalization: "en",
     platforms: [.iOS(.v18)],
     products: [
+        // The product name *must* match the name you `import`
         .library(
             name: "IRDashboard",
-            targets: ["IRDashboard"]),
-    ],
-    dependencies: [
-        
+            targets: ["IRDashboard"]
+        ),
     ],
     targets: [
+        // Make sure this path really contains DashboardView.swift
         .target(
             name: "IRDashboard",
-            dependencies: [
-                
-            ],
-            path: "IRDashboard"
-        ),
+            dependencies: [],
+            path: "IRDashboard"          // or omit and keep the default Sources/IRDashboard
+        )
     ]
 )
+
