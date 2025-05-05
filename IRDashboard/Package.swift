@@ -18,8 +18,7 @@ let package = Package(
         // Make sure this path really contains DashboardView.swift
         .target(
             name: "IRDashboard",
-            dependencies: [],
-            path: "IRDashboard"          // or omit and keep the default Sources/IRDashboard
+            dependencies: []
         )
     ]
 )
