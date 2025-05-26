@@ -13,12 +13,18 @@ let package = Package(
             targets: ["IRDashboardLibrary"]),
     ],
     dependencies: [
+        .package(name: "IRProfile", path: "../../../Features/IRProfile"),
+        .package(name: "IRSettings", path: "../../../Features/IRSettings"),
+        
         .package(name: "IRStyleKit", path: "../../../Packages/IRStyleKit"),
     ],
     targets: [
         .target(
             name: "IRDashboardLibrary",
             dependencies: [
+                "IRProfile",
+                "IRSettings",
+                
                 "IRStyleKit",
             ]
         ),

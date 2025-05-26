@@ -7,6 +7,7 @@
 
 import SwiftUI
 internal import IRStyleKit
+internal import IRProfile
 
 enum DashboardTabBarEnum: String, CaseIterable, TabBarRepresentable {
     case explore, chats, profile
@@ -33,9 +34,9 @@ enum DashboardTabBarEnum: String, CaseIterable, TabBarRepresentable {
 
     var content: AnyView {
         switch self {
-        case .explore: return AnyView(Text("123"))
-        case .chats:   return AnyView(Text("456"))
-        case .profile: return AnyView(Text("5555"))
+        case .explore: return AnyView(Text("Explore"))
+        case .chats:   return AnyView(Text("Chat"))
+        case .profile: return AnyView(ProfileView())
         }
     }
 }
